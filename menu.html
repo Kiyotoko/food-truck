@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' href='https://www.w3.org/StyleSheets/Core/Chocolate' type='text/css'>
+        <!-- See here for more stylesheets: https://www.w3.org/StyleSheets/Core/ -->
+        <link rel='stylesheet' href='style.css' type='text/css'>
+        <title>Food Truck Menu</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <nav id="navigation"></nav>
+        <main>
+            <h1>Menu</h1>
+            <script src="navigation.js"></script>
+            <script src="category.js"></script>
+            <script>
+                const catergies = [
+                    new Category('Drinks', null, CATEGROY_LEVEL, [
+                        new Category('Soft Drinks', 'Available in 0.25, 0.5 and 1.0 liter packs.', SUBCATEGORY_LEVEL, [
+                            new Item('Coca Cola', null, 0), 
+                            new Item('Fanta', null, 0),
+                            new Item('Sprite', null, 0),
+                            new Item('Water', null, 0),
+                            new Item('Icetea', null, 0),
+                            new Item('Orange Juice', null, 0),
+                            new Item('Apple Juice', null, 0)
+                        ]),
+                        new Category('Hot Drinks', null, SUBCATEGORY_LEVEL, [
+                            new Item('Tea', '(<i>black or green</i>)', 2.8), 
+                            new Item('Coffee', '(<i>espresso, latte or cappuccino</i>)', 3.2),
+                            new Item('Hot Chocolate', '(<i>brown or white Chocolate</i>)', 3.2)
+                        ]),
+                        new Category('Alcohol', null, SUBCATEGORY_LEVEL, [
+                            new Item('Martini', null, 0),
+                            new Item('Margarita', null, 0),
+                            new Item('Old Fashioned', null, 0),
+                            new Item('Negroni', null, 0),
+                            new Item('Cosmopolitan', null, 0),
+                            new Item('Moscow Mule', null, 0),
+                            new Item('Whiskey Sour', null, 0),
+                            new Item('Manhattan', null, 0),
+                            new Item('Mai Tai', null, 0),
+                            new Item('Piña Colada', null, 0)
+                        ])
+                    ]),
+                    new Category('Food', null, CATEGROY_LEVEL, [
+                        new Category('Burgers', null, SUBCATEGORY_LEVEL, [
+                            new Item('Chicken Burger', null, 0),
+                            new Item('Crispy Chicken Burger', null, 0),
+                            new Item('Hamburger', null, 0),
+                            new Item('Cheeseburger', null, 0),
+                            new Item('BBQ Burger', null, 0),
+                            new Item('Truffle Burger', null, 0)
+                        ]),
+                        new Category('Pizza', null, SUBCATEGORY_LEVEL, [
+                            new Item('Margherita', null, 0),
+                            new Item('Pepperoni', null, 0),
+                            new Item('Mushroom and Olive', null, 0),
+                            new Item('Hawai', null, 0),
+                            new Item('Quattro Formaggi', null, 0),
+                            new Item('Taco', null, 0)
+                        ]),
+                        new Category('Salad', null, SUBCATEGORY_LEVEL, [
+                            new Item('Caesar Salad', null, 0),
+                            new Item('Greek Salad', null, 0),
+                            new Item('Spinach  and Strawberry Salad', null, 0),
+                            new Item('Taco Salad', null, 0),
+                            new Item('Black Bean Salad', null, 0)
+                        ]),
+                        new Category('Desert', null, SUBCATEGORY_LEVEL, [
+                            new Item('Brownie', null, 0),
+                            new Item('Cheesecake', null, 0),
+                            new Item('Icecream', null, 0),
+                            new Item('Tiramisu', null, 0),
+                            new Item('Apple Pie', null, 0)
+                        ])
+                    ])
+                ]
+
+                for (let category of catergies) {
+                    document.writeln(category.build())
+                }
+            </script>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' href='https://www.w3.org/StyleSheets/Core/Chocolate' type='text/css'>
+        <!-- See here for more stylesheets: https://www.w3.org/StyleSheets/Core/ -->
+        <link rel='stylesheet' href='style.css' type='text/css'>
+        <title>Food Truck Menu</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <nav id="navigation"></nav>
+        <main>
+            <h1>History</h1>
+            <script src="navigation.js"></script>
+            <script src="category.js"></script>
+            <script>
+                const catergies = [
+                    new Category('Early beginnings', 'The roots of food trucks go back a long way. One of the earliest known forms of mobile food stalls are the so-called "lunch wagons" or "lunch carts" of the late 19th century in the USA. These wagons provided workers and commuters in urban areas with simple, quick meals.', SUBCATEGORY_LEVEL, null),
+                    new Category('The ice cream cart', 'In the 1920s, ice cream vendors began selling their products in specially designed vehicles. These carts often drove through residential neighborhoods or congregated in busy parks to offer refreshments.', SUBCATEGORY_LEVEL, null),
+                    new Category('The heyday of food trucks', 'In the 1950s and 1960s, food trucks experienced a peak in popularity, particularly in the USA. The introduction of fast food chains and the increasing mobility of the population contributed to this trend.', SUBCATEGORY_LEVEL, null),
+                    new Category('The modern food truck', 'The revival of food truck culture began in the 2000s. In cities such as Los Angeles and New York, innovative chefs began to offer high-quality and creative dishes from mobile kitchens. This movement was fueled by the increasing demand for authentic, artisanal food and the popularity of street food festivals.', SUBCATEGORY_LEVEL, null),
+                    new Category('Social media and digitalization', 'A decisive turning point in the history of food trucks was the spread of social media. Food truck operators used platforms such as Twitter, Facebook and Instagram to promote their locations and menus. This allowed them to interact directly with their customers and increase their reach.', SUBCATEGORY_LEVEL, null),
+                    new Category('Regulation and professionalization', 'With the success of the food truck movement, cities began to revise their mobile food regulations. This led to a professionalization of the industry, as operators now had to deal with complex licensing procedures, health regulations and location requirements.', SUBCATEGORY_LEVEL, null),
+                    new Category('Diversity and innovation', 'Today, there is an enormous variety of food trucks around the world. From traditional dishes to fusion cuisines, food trucks offer a wide range of culinary experiences. Innovation in terms of ingredients, preparation methods and concepts continues to drive the industry forward, making food trucks an integral part of modern dining culture.', SUBCATEGORY_LEVEL, null),
+                ]
+
+                for (let category of catergies) {
+                    document.writeln(category.build())
+                }
+            </script>
+        </main>
+    </body>
+</html>

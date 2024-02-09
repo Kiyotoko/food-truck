@@ -1,0 +1,20 @@
+h1 { 
+    text-align: center;
+}
+h2 {
+    border-bottom: 4px solid white
+}
+
+.container {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+.info {
+    text-align: left;
+    width: 70%;
+}
+.price {
+    text-align: right;
+    width: 30%;
+}
