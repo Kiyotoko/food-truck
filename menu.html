@@ -6,13 +6,13 @@
         <link rel='stylesheet' href='style.css' type='text/css'>
         <title>Food Truck Menu</title>
         <meta charset="UTF-8">
+        <script src="navigation.js"></script>
+        <script src="category.js"></script>
     </head>
-    <body>
+    <body onload="navigation(1)">
         <nav id="navigation"></nav>
         <main>
             <h1>Menu</h1>
-            <script src="navigation.js"></script>
-            <script src="category.js"></script>
             <script>
                 const catergies = [
                     new Category('Drinks', null, CATEGROY_LEVEL, [
@@ -26,9 +26,9 @@
                             new Item('Apple Juice', null, 0)
                         ]),
                         new Category('Hot Drinks', null, SUBCATEGORY_LEVEL, [
-                            new Item('Tea', '(<i>black or green</i>)', 2.8), 
-                            new Item('Coffee', '(<i>espresso, latte or cappuccino</i>)', 3.2),
-                            new Item('Hot Chocolate', '(<i>brown or white Chocolate</i>)', 3.2)
+                            new Item('Tea', '<i>black or green</i>', 2.8), 
+                            new Item('Coffee', '<i>espresso, latte or cappuccino</i>', 3.2),
+                            new Item('Hot Chocolate', '<i>brown or white chocolate</i>', 3.2)
                         ]),
                         new Category('Alcohol', null, SUBCATEGORY_LEVEL, [
                             new Item('Martini', null, 0),
@@ -50,7 +50,10 @@
                             new Item('Hamburger', null, 0),
                             new Item('Cheeseburger', null, 0),
                             new Item('BBQ Burger', null, 0),
-                            new Item('Truffle Burger', null, 0)
+                            new Item('Truffle Burger', null, 0),
+                            new Img('image/burger-1.webp'),
+                            new Img('image/burger-2.webp'),
+                            new Img('image/burger-3.webp')
                         ]),
                         new Category('Pizza', null, SUBCATEGORY_LEVEL, [
                             new Item('Margherita', null, 0),
@@ -58,21 +61,28 @@
                             new Item('Mushroom and Olive', null, 0),
                             new Item('Hawai', null, 0),
                             new Item('Quattro Formaggi', null, 0),
-                            new Item('Taco', null, 0)
+                            new Item('Taco', null, 0),
+                            new Img('image/pizza-1.webp'),
+                            new Img('image/pizza-2.webp'),
+                            new Img('image/pizza-3.webp')
                         ]),
                         new Category('Salad', null, SUBCATEGORY_LEVEL, [
                             new Item('Caesar Salad', null, 0),
                             new Item('Greek Salad', null, 0),
                             new Item('Spinach  and Strawberry Salad', null, 0),
                             new Item('Taco Salad', null, 0),
-                            new Item('Black Bean Salad', null, 0)
+                            new Item('Black Bean Salad', null, 0),
+                            new Img('image/salad-1.webp'),
+                            new Img('image/salad-2.webp')
                         ]),
-                        new Category('Desert', null, SUBCATEGORY_LEVEL, [
+                        new Category('Dessert', null, SUBCATEGORY_LEVEL, [
                             new Item('Brownie', null, 0),
                             new Item('Cheesecake', null, 0),
                             new Item('Icecream', null, 0),
                             new Item('Tiramisu', null, 0),
-                            new Item('Apple Pie', null, 0)
+                            new Item('Apple Pie', null, 0),
+                            new Img('image/dessert-1.webp'),
+                            new Img('image/dessert-2.webp')
                         ])
                     ])
                 ]

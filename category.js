@@ -33,12 +33,22 @@ class Item extends Buildable {
     }
 
     build() {
-        let build = '<div class="info">'
-        build += '<div>' + this.title + '</div>'
-        if (this.description != null) build += '<div>' + this.description + '</div>'
+        let build = '<div class="info"><div>' + this.title + '</div>'
+        if (this.description != null) build += '<div class="description">' + this.description + '</div>'
         build += '</div>'
         if (this.price != 0) build += '<div class="price">' + this.price + ' $</div>'
         return '<div class="container">' + build + '</div>'
+    }
+}
+
+class Img extends Buildable {
+    constructor(path) {
+        super(null, null)
+        this.path = path
+    }
+
+    build() {
+        return '<img src="' + this.path + '" width=300 height=300 />'
     }
 }
 

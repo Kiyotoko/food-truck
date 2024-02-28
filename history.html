@@ -6,13 +6,13 @@
         <link rel='stylesheet' href='style.css' type='text/css'>
         <title>Food Truck Menu</title>
         <meta charset="UTF-8">
+        <script src="navigation.js"></script>
+        <script src="category.js"></script>
     </head>
-    <body>
+    <body onload="navigation(2)">
         <nav id="navigation"></nav>
         <main>
             <h1>History</h1>
-            <script src="navigation.js"></script>
-            <script src="category.js"></script>
             <script>
                 const catergies = [
                     new Category('Early beginnings', 'The roots of food trucks go back a long way. One of the earliest known forms of mobile food stalls are the so-called "lunch wagons" or "lunch carts" of the late 19th century in the USA. These wagons provided workers and commuters in urban areas with simple, quick meals.', SUBCATEGORY_LEVEL, null),
